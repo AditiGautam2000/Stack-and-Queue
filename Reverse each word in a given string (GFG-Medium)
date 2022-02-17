@@ -1,0 +1,34 @@
+class Solution
+{ Stack<Character> stack=new Stack<Character>();
+   
+    String reverseWords(String s)
+    { String ans=" ",w;
+    s=s+".";
+    
+        for(int i=0;i<s.length();i++)
+        {
+            if(s.charAt(i)=='.')
+            {
+                w=solution(); w.trim();
+                ans=ans+w+'.'; 
+                
+            }
+            else
+            stack.add(s.charAt(i));
+        }
+        ans=ans.substring(1,ans.length()-1); 
+        
+        return ans;
+    }
+    String solution()
+    { String ans=" ";
+        while(!stack.isEmpty())
+        { ans=ans+stack.pop();
+            
+        }ans=ans.substring(1,ans.length()); 
+        return ans;
+    }
+}
+
+
+https://practice.geeksforgeeks.org/problems/reverse-each-word-in-a-given-string1001/1/?category[]=Stack&category[]=Stack&difficulty[]=1&page=1&query=category[]Stackdifficulty[]1page1category[]Stack#
