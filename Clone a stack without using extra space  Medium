@@ -1,0 +1,27 @@
+class Solution {
+    void clonestack(Stack<Integer> stack, Stack<Integer> clone) {
+        clone.push(stack.pop());
+        int c=1,top=0,d;
+        while(!stack.isEmpty())
+        {
+            top=stack.pop();
+            while(!clone.isEmpty())
+            {
+                stack.push(clone.pop());
+            }
+            d=c;
+            clone.push(top);++c;
+        
+            while(d>0)
+            {
+                clone.push(stack.pop());
+                --d;
+            }
+        
+        }
+       
+        }
+        
+        
+        }
+    
