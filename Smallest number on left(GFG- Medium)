@@ -1,0 +1,27 @@
+class Solution{
+    static List<Integer> leftSmaller(int n, int a[])
+    { 
+        Stack<Integer> stack=new Stack<>();
+        ArrayList<Integer> b =new ArrayList<Integer>();;
+        
+        
+        int i;
+    
+        for(i=0;i<a.length;i++)
+        {   
+           while(!stack.isEmpty() && stack.peek()>=a[i])
+            {   stack.pop();}
+            
+            if(stack.isEmpty() )
+            b.add(-1);
+            else
+            b.add(stack.peek());
+            
+                stack.push(a[i]);
+            
+        }
+        return b;
+    }
+}
+
+https://practice.geeksforgeeks.org/problems/smallest-number-on-left3403/1/?page=3&category[]=Stack&sortBy=submissions#
